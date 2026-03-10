@@ -1,0 +1,196 @@
+{
+  "version": 4,
+  "terraform_version": "1.14.3",
+  "serial": 14,
+  "lineage": "c6ba03ab-c3bf-8306-d71d-2ec10e681678",
+  "outputs": {
+    "instance_id": {
+      "value": "ots-example",
+      "type": "string"
+    },
+    "instance_name": {
+      "value": "ots-example",
+      "type": "string"
+    },
+    "table_name": {
+      "value": "example_table",
+      "type": "string"
+    },
+    "this_instance_id": {
+      "value": "ots-example",
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "mode": "data",
+      "type": "alicloud_zones",
+      "name": "available",
+      "provider": "provider[\"registry.terraform.io/aliyun/alicloud\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "available_disk_category": null,
+            "available_instance_type": null,
+            "available_resource_creation": "VSwitch",
+            "available_slb_address_ip_version": null,
+            "available_slb_address_type": null,
+            "enable_details": false,
+            "id": "2291150053",
+            "ids": [
+              "cn-hangzhou-b",
+              "cn-hangzhou-e",
+              "cn-hangzhou-f",
+              "cn-hangzhou-g",
+              "cn-hangzhou-h",
+              "cn-hangzhou-i",
+              "cn-hangzhou-j",
+              "cn-hangzhou-k"
+            ],
+            "instance_charge_type": "PostPaid",
+            "multi": false,
+            "network_type": null,
+            "output_file": null,
+            "spot_strategy": "NoSpot",
+            "zones": [
+              {
+                "available_disk_categories": [],
+                "available_instance_types": [],
+                "available_resource_creation": [],
+                "id": "cn-hangzhou-b",
+                "local_name": "",
+                "multi_zone_ids": [],
+                "slb_slave_zone_ids": []
+              },
+              {
+                "available_disk_categories": [],
+                "available_instance_types": [],
+                "available_resource_creation": [],
+                "id": "cn-hangzhou-e",
+                "local_name": "",
+                "multi_zone_ids": [],
+                "slb_slave_zone_ids": []
+              },
+              {
+                "available_disk_categories": [],
+                "available_instance_types": [],
+                "available_resource_creation": [],
+                "id": "cn-hangzhou-f",
+                "local_name": "",
+                "multi_zone_ids": [],
+                "slb_slave_zone_ids": []
+              },
+              {
+                "available_disk_categories": [],
+                "available_instance_types": [],
+                "available_resource_creation": [],
+                "id": "cn-hangzhou-g",
+                "local_name": "",
+                "multi_zone_ids": [],
+                "slb_slave_zone_ids": []
+              },
+              {
+                "available_disk_categories": [],
+                "available_instance_types": [],
+                "available_resource_creation": [],
+                "id": "cn-hangzhou-h",
+                "local_name": "",
+                "multi_zone_ids": [],
+                "slb_slave_zone_ids": []
+              },
+              {
+                "available_disk_categories": [],
+                "available_instance_types": [],
+                "available_resource_creation": [],
+                "id": "cn-hangzhou-i",
+                "local_name": "",
+                "multi_zone_ids": [],
+                "slb_slave_zone_ids": []
+              },
+              {
+                "available_disk_categories": [],
+                "available_instance_types": [],
+                "available_resource_creation": [],
+                "id": "cn-hangzhou-j",
+                "local_name": "",
+                "multi_zone_ids": [],
+                "slb_slave_zone_ids": []
+              },
+              {
+                "available_disk_categories": [],
+                "available_instance_types": [],
+                "available_resource_creation": [],
+                "id": "cn-hangzhou-k",
+                "local_name": "",
+                "multi_zone_ids": [],
+                "slb_slave_zone_ids": []
+              }
+            ]
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "alicloud_vpc",
+      "name": "example",
+      "provider": "provider[\"registry.terraform.io/aliyun/alicloud\"]",
+      "instances": []
+    },
+    {
+      "mode": "managed",
+      "type": "alicloud_vswitch",
+      "name": "example",
+      "provider": "provider[\"registry.terraform.io/aliyun/alicloud\"]",
+      "instances": []
+    },
+    {
+      "module": "module.ots",
+      "mode": "managed",
+      "type": "alicloud_ots_instance",
+      "name": "instance",
+      "provider": "provider[\"registry.terraform.io/aliyun/alicloud\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "accessed_by": "Any",
+            "description": "OTS instance created by Terraform example",
+            "id": "ots-example",
+            "instance_type": "HighPerformance",
+            "name": "ots-example",
+            "network_source_acl": [
+              "TRUST_PROXY"
+            ],
+            "network_type_acl": [
+              "CLASSIC",
+              "INTERNET",
+              "VPC"
+            ],
+            "resource_group_id": "rg-acfmzaq3ypaqkdy",
+            "tags": {
+              "CreatedBy": "terraform",
+              "Environment": "test"
+            }
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "module": "module.ots",
+      "mode": "managed",
+      "type": "alicloud_ots_instance_attachment",
+      "name": "attachment",
+      "provider": "provider[\"registry.terraform.io/aliyun/alicloud\"]",
+      "instances": []
+    }
+  ],
+  "check_results": null
+}
